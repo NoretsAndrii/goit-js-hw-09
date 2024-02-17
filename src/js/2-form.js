@@ -12,8 +12,8 @@ if (savedFormState !== null) {
 feedbackForm.addEventListener('input', event => {
   event.preventDefault();
 
-  const email = event.currentTarget.elements.email.value;
-  const message = event.currentTarget.elements.message.value;
+  const email = event.currentTarget.elements.email.value.trim();
+  const message = event.currentTarget.elements.message.value.trim();
   const feedbackFormState = {
     email,
     message,
@@ -27,8 +27,8 @@ feedbackForm.addEventListener('input', event => {
 feedbackForm.addEventListener('submit', event => {
   event.preventDefault();
 
-  const email = event.target.elements.email.value;
-  const message = event.target.elements.message.value;
+  const email = event.target.elements.email.value.trim();
+  const message = event.target.elements.message.value.trim();
   if (email === '' || message === '') {
     return alert('Всі поля форми повинні бути заповнені');
   }
