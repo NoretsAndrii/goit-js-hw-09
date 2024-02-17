@@ -30,7 +30,7 @@ feedbackForm.addEventListener('submit', event => {
   const email = event.target.elements.email.value;
   const message = event.target.elements.message.value;
   if (email === '' || message === '') {
-    return alert('Всі поля форми повинні бути заповнени');
+    return alert('Всі поля форми повинні бути заповнені');
   }
   console.log({ email, message });
   localStorage.removeItem('feedback-form-state');
